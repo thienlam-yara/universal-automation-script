@@ -91,4 +91,50 @@ brew install --cask cloudflare-warp || echo "Cloudflare WARP is already installe
 echo "Installing CocoaPods..."
 brew install cocoapods || echo "CocoaPods is already installed."
 
+# Install Maccy
+echo "Installing Maccy..."
+brew install --cask maccy || echo "Maccy is already installed."
+
+# Install AltTab
+echo "Installing AltTab..."
+brew install --cask alttab || echo "AltTab is already installed."
+
+# Install libpq
+echo "Installing libpq..."
+brew install libpq || echo "libpq is already installed."
+
+# Install iOS Simulator
+# Note: This requires the full Xcode application to be installed from the Mac App Store first.
+echo "Checking for available iOS Simulators..."
+if command -v xcodebuild &> /dev/null; then
+    echo "Xcode is installed. Attempting to download the latest iOS Simulator platform..."
+    xcodebuild -downloadPlatform iOS
+else
+    echo "Xcode is not installed. Please install it from the Mac App Store to get iOS Simulators."
+fi
+
+# Install Aviatrix VPN Client
+echo "Installing Aviatrix VPN Client..."
+brew install --cask aviatrix-vpn-client || echo "Aviatrix VPN Client is already installed."
+
+# Install zsh and Oh My Zsh
+echo "Installing zsh and Oh My Zsh..."
+brew install zsh || echo "zsh is already installed."
+if [ ! -d "$HOME/.oh-my-zsh" ]; then
+    sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
+else
+    echo "Oh My Zsh is already installed."
+fi
+
+# Install Warp Terminal
+echo "Installing Warp Terminal..."
+brew install --cask warp || echo "Warp is already installed."
+
+# Install Cloud & DevOps Tools
+echo "Installing Kubernetes, Helm, and AWS tools..."
+brew install kubectl || echo "kubectl is already installed."
+brew install helm || echo "Helm is already installed."
+brew install awscli || echo "AWS CLI is already installed."
+brew install aws-azure-login || echo "aws-azure-login is already installed."
+
 echo "Setup script completed."
