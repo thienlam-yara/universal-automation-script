@@ -1,0 +1,24 @@
+name: Auto Setup Windows Developer Kit CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  test-windows:
+    runs-on: windows-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Check file
+        working-directory: ./.github/workflows
+        run: ls
+
+      - name: Run setup script
+        working-directory: ./.github/workflows
+        shell: pwsh
+        run: ./auto-setup-windows-developer-kit.ps1

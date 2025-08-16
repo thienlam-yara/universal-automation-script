@@ -1,0 +1,27 @@
+name: Auto Setup Linux Developer Kit CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  test-linux:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Check file
+        working-directory: ./.github/workflows
+        run: ls -la
+
+      - name: Make setup script executable
+        working-directory: ./.github/workflows
+        run: chmod +x ./auto-setup-linux-developer-kit.sh
+
+      - name: Run setup script
+        working-directory: ./.github/workflows
+        run: sudo ./auto-setup-linux-developer-kit.sh
