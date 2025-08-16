@@ -103,19 +103,6 @@ brew install --cask alttab || echo "AltTab is already installed."
 echo "Installing libpq..."
 brew install libpq || echo "libpq is already installed."
 
-# Install latest iOS Simulator Runtime
-# Note: This requires the full Xcode application to be installed from the Mac App Store first.
-echo "Installing latest iOS Simulator Runtime..."
-if command -v xcodebuild &> /dev/null; then
-    echo "Xcode is installed. Installing xcodes to manage runtimes..."
-    brew install xcodesorg/made/xcodes || echo "xcodes is already installed or failed to install."
-    
-    echo "Installing the latest available iOS runtime..."
-    xcodes runtimes --install iOS
-else
-    echo "Xcode is not installed. Please install it from the Mac App Store to get iOS Simulators."
-fi
-
 # Install Aviatrix VPN Client
 echo "Installing Aviatrix VPN Client..."
 brew install --cask aviatrix-vpn-client || echo "Aviatrix VPN Client is already installed."
