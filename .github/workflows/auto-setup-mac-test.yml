@@ -13,12 +13,15 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
-      
+
       - name: Check file
+        working-directory: ./.github/workflows
         run: ls -la
 
       - name: Make setup script executable
+        working-directory: ./.github/workflows
         run: chmod +x ./auto-setup-mac.sh
 
       - name: Run setup script
+        working-directory: ./.github/workflows
         run: ./auto-setup-mac.sh
