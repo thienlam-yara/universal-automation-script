@@ -1,0 +1,21 @@
+name: Auto Setup Mac Test 
+
+on:
+  push:
+    branches: [ main ]  # Adjust branch as needed
+  pull_request:
+    branches: [ main ]
+  workflow_dispatch:  # Adds manual trigger
+
+jobs:
+  test-macos:
+    runs-on: macos-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Make setup script executable
+        run: chmod +x auto-setup-mac.sh
+
+      - name: Run setup script
+        run: ./auto-setup-mac.sh
