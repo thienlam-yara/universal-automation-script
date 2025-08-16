@@ -1,4 +1,4 @@
-name: Auto Setup Mac Test 
+name: Auto Setup Mac Developer Kit CI
 
 on:
   push:
@@ -20,8 +20,8 @@ jobs:
 
       - name: Make setup script executable
         working-directory: ./.github/workflows
-        run: chmod +x ./auto-setup-mac.sh
+        run: chmod +x ./auto-setup-mac-developer-kit.sh
 
       - name: Run setup script
         working-directory: ./.github/workflows
-        run: ./auto-setup-mac.sh
+        run: ./auto-setup-mac-developer-kit.sh

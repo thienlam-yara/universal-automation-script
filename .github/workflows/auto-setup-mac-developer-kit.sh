@@ -33,6 +33,16 @@ if [ ! -d "$HOME/.nvm" ]; then
     # Load NVM for the current session
     export NVM_DIR="$HOME/.nvm"
     [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+
+    # Add NVM to shell profile for future sessions
+    echo "Configuring NVM for new terminal sessions..."
+    {
+      echo ''
+      echo '# NVM configuration'
+      echo 'export NVM_DIR="$HOME/.nvm"'
+      echo '[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm'
+      echo '[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion'
+    } >> "$HOME/.zshrc"
 else
     echo "NVM is already installed."
 fi
@@ -52,5 +62,33 @@ brew install --cask android-studio || echo "Android Studio is already installed.
 # Install JDK (using OpenJDK latest version)
 echo "Installing OpenJDK..."
 brew install openjdk || echo "OpenJDK is already installed."
+
+# Install GitHub Desktop
+echo "Installing GitHub Desktop..."
+brew install --cask github || echo "GitHub Desktop is already installed."
+
+# Install Flipper
+echo "Installing Flipper..."
+brew install --cask flipper || echo "Flipper is already installed."
+
+# Install DBeaver Community Edition
+echo "Installing DBeaver Community Edition..."
+brew install --cask dbeaver-community || echo "DBeaver Community Edition is already installed."
+
+# Install Studio 3T
+echo "Installing Studio 3T..."
+brew install --cask studio-3t || echo "Studio 3T is already installed."
+
+# Install Microsoft Teams
+echo "Installing Microsoft Teams..."
+brew install --cask microsoft-teams || echo "Microsoft Teams is already installed."
+
+# Install Cloudflare WARP
+echo "Installing Cloudflare WARP..."
+brew install --cask cloudflare-warp || echo "Cloudflare WARP is already installed."
+
+# Install CocoaPods
+echo "Installing CocoaPods..."
+brew install cocoapods || echo "CocoaPods is already installed."
 
 echo "Setup script completed."
