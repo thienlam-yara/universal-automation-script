@@ -2,10 +2,14 @@ name: Auto Setup Mac Developer Kit CI
 
 on:
   push:
-    branches: [ main ]  # Adjust branch as needed
+    branches: [ main ] # Adjust branch as needed
+    paths:
+      - '.github/workflows/auto-setup-mac-developer-kit.sh'
   pull_request:
     branches: [ main ]
-  workflow_dispatch:  # Adds manual trigger
+    paths:
+      - '.github/workflows/auto-setup-mac-developer-kit.sh'
+  workflow_dispatch: # Adds manual trigger
 
 jobs:
   test-macos:

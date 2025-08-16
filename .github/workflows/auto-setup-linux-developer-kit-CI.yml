@@ -3,8 +3,12 @@ name: Auto Setup Linux Developer Kit CI
 on:
   push:
     branches: [ main ]
+    paths:
+      - '.github/workflows/auto-setup-linux-developer-kit.sh'
   pull_request:
     branches: [ main ]
+    paths:
+      - '.github/workflows/auto-setup-linux-developer-kit.sh'
   workflow_dispatch:
 
 jobs:
