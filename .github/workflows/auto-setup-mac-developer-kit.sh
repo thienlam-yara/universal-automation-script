@@ -123,6 +123,15 @@ brew install handbrake
 # Install Postman
 brew install --cask postman
 
+# Install Ollama
+brew install ollama
+
+# Install Claude Code
+brew install --cask claude-code
+
+# Install Claude Desktop
+brew install --cask claude
+
 # Install Cloud & DevOps Tools
 echo "Installing Kubernetes, Helm, and AWS tools..."
 brew install kubectl || echo "kubectl is already installed."
