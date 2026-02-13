@@ -132,6 +132,9 @@ brew install --cask claude-code
 # Install Claude Desktop
 brew install --cask claude
 
+# Install Oka Unarchiver
+brew install --cask oka-unarchiver
+
 # Install Cloud & DevOps Tools
 echo "Installing Kubernetes, Helm, and AWS tools..."
 brew install kubectl || echo "kubectl is already installed."
