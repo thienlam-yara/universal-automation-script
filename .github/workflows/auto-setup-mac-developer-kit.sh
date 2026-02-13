@@ -117,7 +117,7 @@ brew install --cask nosqlbooster-for-mongodb
 echo "Installing Warp Terminal..."
 brew install --cask warp || echo "Warp is already installed."
 
-# Install Handbrake
+# Install Handbrake (For optimize video)
 brew install handbrake
 
 # Install Postman
@@ -134,6 +134,15 @@ brew install --cask claude
 
 # Install Oka Unarchiver
 brew install --cask oka-unarchiver
+
+# Install clean cache tool
+brew install moe
+
+# Install rectangle
+brew install --cask rectangle
+
+# Install Go Tieng Viet
+brew install --cask gotiengviet
 
 # Install Cloud & DevOps Tools
 echo "Installing Kubernetes, Helm, and AWS tools..."
