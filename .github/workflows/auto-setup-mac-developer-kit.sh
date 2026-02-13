@@ -117,6 +117,12 @@ brew install --cask nosqlbooster-for-mongodb
 echo "Installing Warp Terminal..."
 brew install --cask warp || echo "Warp is already installed."
 
+# Install Handbrake
+brew install handbrake
+
+# Install Postman
+brew install --cask postman
+
 # Install Cloud & DevOps Tools
 echo "Installing Kubernetes, Helm, and AWS tools..."
 brew install kubectl || echo "kubectl is already installed."
