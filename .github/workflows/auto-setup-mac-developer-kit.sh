@@ -67,17 +67,9 @@ brew install openjdk || echo "OpenJDK is already installed."
 echo "Installing GitHub Desktop..."
 brew install --cask github || echo "GitHub Desktop is already installed."
 
-# Install Flipper
-echo "Installing Flipper..."
-brew install --cask flipper || echo "Flipper is already installed."
-
 # Install DBeaver Community Edition
 echo "Installing DBeaver Community Edition..."
 brew install --cask dbeaver-community || echo "DBeaver Community Edition is already installed."
-
-# Install Studio 3T
-echo "Installing Studio 3T..."
-brew install --cask studio-3t || echo "Studio 3T is already installed."
 
 # Install Microsoft Teams
 echo "Installing Microsoft Teams..."
@@ -103,10 +95,6 @@ brew install --cask alttab || echo "AltTab is already installed."
 echo "Installing libpq..."
 brew install libpq || echo "libpq is already installed."
 
-# Install Aviatrix VPN Client
-echo "Installing Aviatrix VPN Client..."
-brew install --cask aviatrix-vpn-client || echo "Aviatrix VPN Client is already installed."
-
 # Install zsh and Oh My Zsh
 echo "Installing zsh and Oh My Zsh..."
 brew install zsh || echo "zsh is already installed."
@@ -115,6 +103,15 @@ if [ ! -d "$HOME/.oh-my-zsh" ]; then
 else
     echo "Oh My Zsh is already installed."
 fi
+
+# Install Reactotron
+brew install --cask reactotron
+
+# Install Yarn
+brew install yarn
+
+# Install NoSQL booster
+brew install --cask nosqlbooster-for-mongodb
 
 # Install Warp Terminal
 echo "Installing Warp Terminal..."
