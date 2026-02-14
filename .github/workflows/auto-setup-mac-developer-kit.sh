@@ -144,6 +144,12 @@ brew install --cask rectangle
 # Install Go Tieng Viet
 brew install --cask gotiengviet
 
+# Install Betterdisplay
+brew install --cask betterdisplay
+
+# Install AWS VPN Client
+brew install --cask aws-vpn-client
+
 # Install Cloud & DevOps Tools
 echo "Installing Kubernetes, Helm, and AWS tools..."
 brew install kubectl || echo "kubectl is already installed."
